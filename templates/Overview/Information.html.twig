@@ -1,0 +1,44 @@
+{% extends '/Layouts/Menu.html.twig' %}
+
+
+
+{% block article %}
+    <section class="article">
+        <div class="article-list">
+
+            <div class="right">
+                <div class="article-right">
+                    <img src="image/penguin-logo.jpg" alt="Image Jeu">
+                    <div class="texte-right">
+                        <h1 class="article-title">Personnages</h1>
+                        <p class="article-description">Pleins fffr d'informations incroyables sur les personnages et du lore inexistant pour le moment</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="left">
+                <div class="article-left">
+                    <div class="texte-left">
+                        <h1 class="article-title">Zones</h1>
+                        <p class="article-description">Pleins d'informations incroyables sur les différentes zones du monde du jeu</p>
+                    </div>
+                    <img src="image/penguin-logo.jpg" alt="Image Jeu">
+                </div>
+            </div>
+            
+            
+            <a href="{{ path('overview_accueil') }}">
+                <div class="right">
+                <div class="article-right">
+                    <img src="image/penguin-logo.jpg" alt="Image Jeu">
+                    <div class="texte-right">
+                        <h1 class="article-title">Implants</h1>
+                        <p class="article-description">Pleins d'informations incroyables sur les implants qui représente une grande liberté laissé aux joueurs pour leur plus grand bonheur !</p>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div>
+        
+    </section>
+{% endblock %}

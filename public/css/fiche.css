@@ -1,0 +1,103 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+div.list a {
+    height: 100%;
+}
+
+div.special{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(44, 44, 44);
+    width: 100%;
+}
+
+div.impair{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(218, 218, 218);
+    width: 100%;
+}
+
+div.pair{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+}
+
+div.articleImg {
+    display: flex;
+    align-items: center;
+    width: 1600px;
+}
+
+div.contentImg {
+    width: 100%;
+}
+
+div.content {
+    width: 1600px;
+}
+
+div.articleImg img{
+    width: 500px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.texte {
+    width: 50%;
+    margin-right: 80px;
+}
+
+.texte {
+    width: 50%;
+    margin-left: 80px;
+}
+
+
+.title {
+    color: black;
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    position: relative;
+}
+
+div.zone-title .title {
+    color:cornsilk;
+    font-size: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    position: relative;
+}
+
+div.content .title::before {
+    content: " ";
+    position: absolute;
+    background-color:maroon;
+    width: 50px;
+    height: 7px;
+    bottom: 0;
+}
+
+div.contentImg .title::before {
+    content: " ";
+    position: absolute;
+    background-color:maroon;
+    width: 50px;
+    height: 7px;
+    bottom: 0;
+}
+
+.description {
+    color: black;
+    font-size: 30px;
+}

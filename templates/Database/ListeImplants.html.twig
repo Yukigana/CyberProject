@@ -1,0 +1,48 @@
+{% extends '/Layouts/Menu.html.twig' %}
+
+{% block css %}
+    <link href="{{ asset('css/listContent.css') }}" type="text/css" rel="stylesheet">
+{% endblock %}
+
+
+
+{% block article %}
+    <section class="article">
+        <div class="mainZone-list">
+            
+            <div class="impair">
+                <div class="mainZone">
+                    <h1 class="mainZoneTitle">Actif</h1>
+                    <div class="sousZoneLine">
+                        {% for a in actif %}
+                            <a href="{{ path('database_implant', {'id_implant' : a.id})}}">
+                                <div class="sousZone">
+                                    <img src="{{ asset(a.image)}}" alt="image zone">
+                                    <p class="sousZoneName">{{a.name}}</p>
+                                </div>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pair">
+                <div class="mainZone">
+                    <h1 class="mainZoneTitle">Passif</h1>
+                    <div class="sousZoneLine">
+                        {% for p in passif %}
+                            <a href="{{ path('database_implant', {id_implant : p.id})}}">
+                                <div class="sousZone">
+                                    <img src="{{ asset(p.image)}}" alt="image zone">
+                                    <p class="sousZoneName">{{p.name}}</p>
+                                </div>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends '/Layouts/Menu.html.twig' %}
+
+{% block css %}
+    <link href="{{ asset('css/listContent.css') }}" type="text/css" rel="stylesheet">
+{% endblock %}
+
+
+
+{% block article %}
+    <section class="article">
+        <div class="mainZone-list">
+            {% set b = true %}
+            {% for mZone in zone %}
+                {% if b %}
+                {% set b = false %}
+                <div class="impair">
+                    <div class="mainZone">
+                        <h1 class="mainZoneTitle">{{mZone.mainZone.name}}</h1>
+                        <div class="sousZoneLine">
+                            {% for sZone in mZone.sousZone %}
+                            <a href="{{ path('database_zone', {'id_zone' : sZone.id})}}">
+                                <div class="sousZone">
+                                    <img src="{{ asset(sZone.image)}}" alt="image zone">
+                                    <p class="sousZoneName">{{sZone.name}}</p>
+                                </div>
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                {% set b = true %}
+                <div class="pair">
+                    <div class="mainZone">
+                        <h1 class="mainZoneTitle">{{mZone.mainZone.name}}</h1>
+                        <div class="sousZoneLine">
+                            {% for sZone in mZone.sousZone %}
+                            <a href="{{ path('database_zone', {id_zone : sZone.id})}}">
+                                <div class="sousZone">
+                                    <img src="{{ asset(sZone.image)}}" alt="image zone">
+                                    <p class="sousZoneName">{{sZone.name}}</p>
+                                </div>
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+
+        </div>
+
+    </section>
+{% endblock %}

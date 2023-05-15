@@ -33,7 +33,13 @@ class OverviewController extends AbstractController
     {
         return $this->render('Overview/Aventure.html.twig');
     }
-
+/*
+    #[Route('/info', name: '_listZone')]
+    public function listZoneAction(): Response
+    {
+        return $this->render('Database/ListZone.html.twig');
+    }
+*/
     #[Route('/duel', name: '_duel')]
     public function duelAction(): Response
     {

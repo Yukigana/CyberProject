@@ -4,13 +4,14 @@
     <link href="{{ asset('css/fiche.css') }}" type="text/css" rel="stylesheet">
 {% endblock %}
 
+{% block test%} <img src="../image/penguin-logo-2.png" alt="Logo"> {%endblock%}
 
 {% block article %}
     <section class="article">
         <div class="list">
             <div class="special">
                 <div class="zone-title">
-                    <h1 class="title">Nom du jeu</h1>
+                    <h1 class="title">{{zone.name}}</h1>
                 </div>
             </div>
 
@@ -18,17 +19,26 @@
                 <div class="articleImg">
                     <div class="contentImg">
                         <h1 class="title">Description</h1>
-                        <p class="description">Ceci est une description incroyablement complète !</p>
+                        <p class="description">{{zone.description}}</p>
                     </div>
-                    <img src="image/penguin-logo.jpg" alt="Image Jeu">
+                    <img src="../{{zone.image}}" alt="Image Jeu">
                 </div>
             </div>
 
             <div class="pair">
                 <div class="article">
                     <div class="content">
-                        <h1 class="title">Jouabilité</h1>
-                        <p class="description">Aucune car il n'existe pas encore...</p>
+                        <h1 class="title">Histoire</h1>
+                        <p class="description">{{zone.histoire}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="impair">
+                <div class="article">
+                    <div class="content">
+                        <h1 class="title">Comment y accéder</h1>
+                        <p class="description">{{zone.acces}}</p>
                     </div>
                 </div>
             </div>

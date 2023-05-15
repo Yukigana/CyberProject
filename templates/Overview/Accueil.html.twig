@@ -1,12 +1,14 @@
 {% extends '/Layouts/Menu.html.twig' %}
 
-
+{% block css %}
+    <link href="{{ asset('css/content.css') }}" type="text/css" rel="stylesheet">
+{% endblock %}
 
 {% block article %}
     <section class="article">
         <div class="article-list">
             
-            <a href="{{ path('overview_accueil') }}">
+            <a href="{{ path('overview_info') }}">
                 <div class="right">
                     <div class="article-right">
                         <img src="image/penguin-logo.jpg" alt="Image Jeu">
@@ -30,7 +32,7 @@
                 </div>
             </a>
             
-            <a href="{{ path('overview_aventure') }}">
+            <a href="{{ path('overview_duel') }}">
                 <div class="right">
                     <div class="article-right">
                         <img src="image/penguin-logo.jpg" alt="Image Jeu">

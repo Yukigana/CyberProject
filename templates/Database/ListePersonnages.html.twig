@@ -1,0 +1,64 @@
+{% extends '/Layouts/Menu.html.twig' %}
+
+{% block css %}
+    <link href="{{ asset('css/listContent.css') }}" type="text/css" rel="stylesheet">
+{% endblock %}
+
+
+
+{% block article %}
+    <section class="article">
+        <div class="mainZone-list">
+            
+            <div class="impair">
+                <div class="mainZone">
+                    <h1 class="mainZoneTitle">Marchants</h1>
+                    <div class="sousZoneLine">
+                        {% for m in marchants %}
+                            <a href="{{ path('database_perso', {'id_perso' : m.id})}}">
+                                <div class="sousZone">
+                                    <img src="{{ asset(m.image)}}" alt="image zone">
+                                    <p class="sousZoneName">{{m.name}}</p>
+                                </div>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pair">
+                <div class="mainZone">
+                    <h1 class="mainZoneTitle">PNJ de quêtes</h1>
+                    <div class="sousZoneLine">
+                        {% for q in quete %}
+                            <a href="{{ path('database_perso', {id_perso : q.id})}}">
+                                <div class="sousZone">
+                                    <img src="{{ asset(q.image)}}" alt="image zone">
+                                    <p class="sousZoneName">{{q.name}}</p>
+                                </div>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="impair">
+                <div class="mainZone">
+                    <h1 class="mainZoneTitle">Divers</h1>
+                    <div class="sousZoneLine">
+                        {% for d in divers %}
+                            <a href="{{ path('database_perso', {'id_perso' : d.id})}}">
+                                <div class="sousZone">
+                                    <img src="{{ asset(d.image)}}" alt="image zone">
+                                    <p class="sousZoneName">{{d.name}}</p>
+                                </div>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends '/Layouts/Menu.html.twig' %}
+
+{% block css %}
+    <link href="{{ asset('css/fichePerso.css') }}" type="text/css" rel="stylesheet">
+{% endblock %}
+
+{% block test%} <img src="../image/penguin-logo-2.png" alt="Logo"> {%endblock%}
+
+{% block article %}
+    <section class="article">
+        <div class="list">
+            <div class="special">
+                <div class="zone-title">
+                    <h1 class="title">{{champion.name}}</h1>
+                </div>
+            </div>
+
+            <div class="impair">
+                <div class="articleImg">
+                    <div class="contentImg">
+                        <h1 class="title">Description</h1>
+                        <p class="description">{{champion.description}}</p>
+                    </div>
+                    <img src="../{{champion.image}}" alt="Image Jeu">
+                </div>
+            </div>
+
+            <div class="pair">
+                <div class="article">
+                    <div class="content">
+                        <h1 class="title">Histoire</h1>
+                        <p class="description">{{champion.histoire}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="impair">
+                <div class="article">
+                    <div class="content">
+                        <h1 class="title">Implants</h1>
+
+                        <div class="sousZoneLine">
+                            {% for a in implants %}
+                                <a href="{{ path('database_implant', {'id_implant' : a.id})}}">
+                                    <div class="sousZone">
+                                        <img src="{{ asset(a.image)}}" alt="image zone">
+                                        <p class="sousZoneName">{{a.name}}</p>
+                                    </div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+{% endblock %}

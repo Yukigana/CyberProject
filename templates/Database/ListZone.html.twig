@@ -18,7 +18,7 @@
                         <h1 class="mainZoneTitle">{{mZone.mainZone.name}}</h1>
                         <div class="sousZoneLine">
                             {% for sZone in mZone.sousZone %}
-                            <a href="{{ path('database_zone', {'id_zone' : sZone.id})}}">
+                            <a href="{{ path('zone_zone', {'id_zone' : sZone.id})}}">
                                 <div class="sousZone">
                                     <img src="{{ asset(sZone.image)}}" alt="image zone">
                                     <p class="sousZoneName">{{sZone.name}}</p>
@@ -35,7 +35,7 @@
                         <h1 class="mainZoneTitle">{{mZone.mainZone.name}}</h1>
                         <div class="sousZoneLine">
                             {% for sZone in mZone.sousZone %}
-                            <a href="{{ path('database_zone', {id_zone : sZone.id})}}">
+                            <a href="{{ path('zone_zone', {id_zone : sZone.id})}}">
                                 <div class="sousZone">
                                     <img src="{{ asset(sZone.image)}}" alt="image zone">
                                     <p class="sousZoneName">{{sZone.name}}</p>

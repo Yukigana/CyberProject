@@ -15,7 +15,7 @@
                     <h1 class="mainZoneTitle">Marchants</h1>
                     <div class="sousZoneLine">
                         {% for m in marchants %}
-                            <a href="{{ path('database_perso', {'id_perso' : m.id})}}">
+                            <a href="{{ path('personnage_perso', {'id_perso' : m.id})}}">
                                 <div class="sousZone">
                                     <img src="{{ asset(m.image)}}" alt="image zone">
                                     <p class="sousZoneName">{{m.name}}</p>
@@ -31,7 +31,7 @@
                     <h1 class="mainZoneTitle">PNJ de quêtes</h1>
                     <div class="sousZoneLine">
                         {% for q in quete %}
-                            <a href="{{ path('database_perso', {id_perso : q.id})}}">
+                            <a href="{{ path('personnage_perso', {id_perso : q.id})}}">
                                 <div class="sousZone">
                                     <img src="{{ asset(q.image)}}" alt="image zone">
                                     <p class="sousZoneName">{{q.name}}</p>
@@ -47,7 +47,7 @@
                     <h1 class="mainZoneTitle">Divers</h1>
                     <div class="sousZoneLine">
                         {% for d in divers %}
-                            <a href="{{ path('database_perso', {'id_perso' : d.id})}}">
+                            <a href="{{ path('personnage_perso', {'id_perso' : d.id})}}">
                                 <div class="sousZone">
                                     <img src="{{ asset(d.image)}}" alt="image zone">
                                     <p class="sousZoneName">{{d.name}}</p>

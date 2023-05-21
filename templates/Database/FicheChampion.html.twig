@@ -41,7 +41,7 @@
 
                         <div class="sousZoneLine">
                             {% for a in implants %}
-                                <a href="{{ path('database_implant', {'id_implant' : a.id})}}">
+                                <a href="{{ path('implant_implant', {'id_implant' : a.id})}}">
                                     <div class="sousZone">
                                         <img src="{{ asset(a.image)}}" alt="image zone">
                                         <p class="sousZoneName">{{a.name}}</p>

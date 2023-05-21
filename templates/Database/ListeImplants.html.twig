@@ -15,7 +15,7 @@
                     <h1 class="mainZoneTitle">Actif</h1>
                     <div class="sousZoneLine">
                         {% for a in actif %}
-                            <a href="{{ path('database_implant', {'id_implant' : a.id})}}">
+                            <a href="{{ path('implant_implant', {'id_implant' : a.id})}}">
                                 <div class="sousZone">
                                     <img src="{{ asset(a.image)}}" alt="image zone">
                                     <p class="sousZoneName">{{a.name}}</p>
@@ -31,7 +31,7 @@
                     <h1 class="mainZoneTitle">Passif</h1>
                     <div class="sousZoneLine">
                         {% for p in passif %}
-                            <a href="{{ path('database_implant', {id_implant : p.id})}}">
+                            <a href="{{ path('implant_implant', {id_implant : p.id})}}">
                                 <div class="sousZone">
                                     <img src="{{ asset(p.image)}}" alt="image zone">
                                     <p class="sousZoneName">{{p.name}}</p>

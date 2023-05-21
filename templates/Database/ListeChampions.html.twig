@@ -15,7 +15,7 @@
                     <h1 class="mainZoneTitle">Champions</h1>
                     <div class="sousZoneLine">
                         {% for c in champions %}
-                            <a href="{{ path('database_champion', {'id_champion' : c.id})}}">
+                            <a href="{{ path('champion_champion', {'id_champion' : c.id})}}">
                                 <div class="sousZone">
                                     <img src="{{ asset(c.image)}}" alt="image zone">
                                     <p class="sousZoneName">{{c.name}}</p>
